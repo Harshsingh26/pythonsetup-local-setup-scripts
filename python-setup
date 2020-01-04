@@ -1,0 +1,22 @@
+!# /usr/bin/bash
+
+echo "Check the Python Version.It should be greater than 3.7"
+python3 -V
+
+echo "Creating virtualenvironment"
+virtualenv venv -p python3
+
+echo "For activating the virtual environment"
+source venv/bin/activate  
+
+echo "for installing the requiremnts packages"
+pip install -r requirements.txt
+
+echo "for creating .env file"
+touch .env
+
+echo "For migration"
+python manage.py migrate
+
+echo "For starting the server : Congo, serveris running "
+python manage.py runserver
