@@ -9,6 +9,9 @@ virtualenv venv -p python3
 echo "For activating the virtual environment"
 source venv/bin/activate  
 
+echo "for instaling the django"
+pip install djangorestframework
+
 echo "for installing the requiremnts packages"
 pip install -r requirements.txt
 
